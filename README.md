@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ```
 
 # 2. Setup gmail
-<p> i. Write your Email address and  password in config.json file </p>
+<p> i. Write your Name, Email address and password in config.json file </p>
 
 <p> ii. Open this link in your browser https://myaccount.google.com/lesssecureapps </p>
 
