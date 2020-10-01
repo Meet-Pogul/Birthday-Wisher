@@ -32,11 +32,25 @@ cd Birthday-Wisher
 pip install -r requirements.txt
 ```
 
-# 2. Usage:
-<p> i. Run the python file (Birthday_Wisher.py) </p>
+# 2. Setup gmail
+<p> i. Write your Email address and  password in config.json file </p>
+
+<p> ii. Open this link in your browser https://myaccount.google.com/lesssecureapps </p>
+
+<p> iii. Select your gmail account that you have entered in config.json </p>
+
+<p> iv. Now just click on "Allow less secure apps: OFF" to allow less secure apps on your account </p>
+
+<p> Dont't worry, this step will not harm your account, it will just allow our python script to send e-mail </p>
+
+# 3. Usage:
+<p> i. Enter all the details of your loved ones in the birthday.xlsx file </p>
+
+<p> ii. Run the python file (Birthday_Wisher.py) </p>
 
 <p> Or type the command in terminal/command prompt: </p>
 
 ```
 python Birthday_Wisher.py
 ```
+<p> iii. Now enjoy! </p>
