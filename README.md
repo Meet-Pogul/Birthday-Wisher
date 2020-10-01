@@ -54,3 +54,6 @@ pip install -r requirements.txt
 python Birthday_Wisher.py
 ```
 <p> iii. Now enjoy! </p>
+
+# 4. Set Daily Task
+<p> Set Daily Task Using Task Scheduler in Windows </p>
