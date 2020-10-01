@@ -1,15 +1,15 @@
 from pandas import read_excel
 from datetime import datetime
 from smtplib import SMTP
+import json
 
 
 def send_email(name, email, msg):
-    with open(r"infomail.txt", "r") as f:
-        a = f.read()
-        a = a.split()
-        a = a.replace("\n")
-    GMAIL_ID = a[0]
-    GMAIL_PASWD = a[1]
+    with open('config.json', 'r') as c:
+        params = json.load(c)["params"]
+            
+    GMAIL_ID = params["Gmail_username"]
+    GMAIL_PASWD = params["Gmail_password"]
     s = SMTP('smtp.gmail.com', 587)
     s.starttls()
     s.login(GMAIL_ID, GMAIL_PASWD)
@@ -19,8 +19,6 @@ def send_email(name, email, msg):
 
 
 if __name__ == '__main__':
-    # send_email('Isha', "ishasp281004@gmail.com", 'Happy Birthday to you')
-    # exit()
     today = datetime.now().strftime("%d-%m")
     this_year = datetime.now().strftime("%Y")
     df = read_excel(r"birthday.xlsx")
@@ -35,12 +33,3 @@ if __name__ == '__main__':
     for i in indexes:
         df.loc[i, 'Year'] = str(df.loc[i, 'Year']) + ", " + this_year
         df.to_excel('birthday.xlsx', index=False)
-
-# Study smtp and less secure app
-# task schedular
-# create task
-# set trigers
-# write genreal
-# action -> start program
-# select python.exe from python installed folder
-# add arguments -> "location of file"
