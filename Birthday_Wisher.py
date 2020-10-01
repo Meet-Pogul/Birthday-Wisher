@@ -10,10 +10,11 @@ def send_email(name, email, msg):
             
     GMAIL_ID = params["Gmail_username"]
     GMAIL_PASWD = params["Gmail_password"]
+    NAME = params["Name"]
     s = SMTP('smtp.gmail.com', 587)
     s.starttls()
     s.login(GMAIL_ID, GMAIL_PASWD)
-    s.sendmail(GMAIL_ID, email, f"Subject: Birthday\n\n{msg} {name}\nFrom Meet Pogul and Family")
+    s.sendmail(GMAIL_ID, email, f"Subject: Birthday\n\n{msg} {name}\nFrom {NAME}")
     s.quit()
     print(f"Message:{msg} {name}\nsent to {email} ")
 
