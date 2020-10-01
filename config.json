@@ -2,6 +2,7 @@
     "params":
     {
         "Gmail_username":"your_username",
-        "Gmail_password":"your-password"
+        "Gmail_password":"your-password",
+        "Name":"your-name"
     }
 }
